@@ -4,6 +4,7 @@ import (
 	schemas "diab/database"
 	"encoding/json"
 	"net/http"
+	"strconv"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
@@ -262,7 +263,7 @@ func NewTest(c *gin.Context, db *gorm.DB) {
 		Active:        active,
 		Weight:        weight,
 		Height:        height,
-		Score:         score,
+		Score:         strconv.Itoa(score),
 	}
 	db.Create(&test)
 	response, _ := json.Marshal(test)
