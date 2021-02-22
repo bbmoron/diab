@@ -48,6 +48,7 @@ func main() {
 	router.GET("/test", func(c *gin.Context) { routes.GetTest(c, db) })
 	// U Routing
 	router.POST("/users", func(c *gin.Context) { routes.EditUser(c, db) })
+	router.POST("/auth", func(c *gin.Context) { routes.SignIn(c, db) })
 	// Start listening
 	router.Run(defaultHTTPPort)
 }
