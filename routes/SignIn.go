@@ -6,8 +6,6 @@ import (
 	"encoding/hex"
 	"net/http"
 
-	"crypto/sha256"
-
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )
