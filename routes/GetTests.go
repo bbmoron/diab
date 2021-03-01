@@ -13,7 +13,7 @@ import (
 func GetTests(c *gin.Context, db *gorm.DB) {
 	uid := c.Query("uid")
 	var tests []schemas.Test
-	db.Find(&tests, "owner_id = ?", uid)
+	db.Find(&tests, "ownerId = ?", uid)
 	response, _ := json.Marshal(tests)
 	c.String(http.StatusOK, string(response))
 }
