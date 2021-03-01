@@ -33,7 +33,7 @@ func EditUser(c *gin.Context, db *gorm.DB) {
 		Height:     height,
 		Weight:     weight,
 	}
-	db.Model(&user).Where("id = ?", UID).Update(newData)
+	db.Model(&user).Where("id = ?", UID).Updates(newData)
 	response, _ := json.Marshal(newData)
 	c.String(http.StatusOK, string(response))
 }
