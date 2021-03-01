@@ -13,7 +13,7 @@ import (
 func GetHistory(c *gin.Context, db *gorm.DB) {
 	chatID := c.Query("chatId")
 	var messages []schemas.Message
-	db.Find(&messages, "chatId = ?", chatID)
+	db.Find(&messages, "chat_id = ?", chatID)
 	response, _ := json.Marshal(messages)
 	c.String(http.StatusOK, string(response))
 }
