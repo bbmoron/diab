@@ -3,6 +3,7 @@ package diab
 import (
 	schemas "diab/database"
 	"encoding/json"
+	"encoding/hex"
 	"net/http"
 	"strconv"
 
@@ -22,14 +23,13 @@ func EditUser(c *gin.Context, db *gorm.DB) {
 	height := c.PostForm("height")
 	weight := c.PostForm("weight")
 	password := c.PostForm("password")
-	h := sha256.New()
-	h.Write([]byte(password))
+	shaed := NewSHA256([]byte(password))
 	// Editing existing user
 	var user schemas.User
 	newData := schemas.User{
 		Name:       name,
 		Email:      email,
-		Password:   string(h.Sum(nil)),
+		Password:   hex.EncodeToString(shaed),
 		TestResult: testResult,
 		Subscribed: subscribed,
 		Height:     height,
