@@ -18,7 +18,7 @@ func SignIn(c *gin.Context, db *gorm.DB) {
 	password := c.PostForm("password")
 	shaed := NewSHA256([]byte(password))
 	var user schemas.User
-	db.Find(&user, "email = ? AND password = ?", email, hex.EncodeToString(password))
+	db.Find(&user, "email = ? AND password = ?", email, hex.EncodeToString(shaed))
 	response, _ := json.Marshal(user)
 	c.String(http.StatusOK, string(response))
 }
