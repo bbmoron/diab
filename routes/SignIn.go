@@ -3,6 +3,7 @@ package diab
 import (
 	schemas "diab/database"
 	"encoding/json"
+	"encoding/hex"
 	"net/http"
 
 	"crypto/sha256"
@@ -15,10 +16,9 @@ import (
 func SignIn(c *gin.Context, db *gorm.DB) {
 	email := c.PostForm("email")
 	password := c.PostForm("password")
-	h := sha256.New()
-	h.Write([]byte(password))
+	shaed := NewSHA256([]byte(password))
 	var user schemas.User
-	db.Find(&user, "email = ? AND password = ?", email, password)
+	db.Find(&user, "email = ? AND password = ?", email, hex.EncodeToString(password))
 	response, _ := json.Marshal(user)
 	c.String(http.StatusOK, string(response))
 }
