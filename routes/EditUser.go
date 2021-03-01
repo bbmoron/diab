@@ -7,8 +7,6 @@ import (
 	"net/http"
 	"strconv"
 
-	"crypto/sha256"
-
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )
