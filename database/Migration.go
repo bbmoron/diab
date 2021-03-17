@@ -9,4 +9,5 @@ func InitAutoMigrate(db *gorm.DB) {
 	db.AutoMigrate(&Message{})
 	db.AutoMigrate(&Chat{})
 	db.AutoMigrate(&User{})
+	db.AutoMigrate(&Test{})
 }
