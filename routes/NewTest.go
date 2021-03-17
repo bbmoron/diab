@@ -61,7 +61,7 @@ func checkActive(active string) int {
 }
 
 func checkHeightWeight(h string, w string) int {
-	if h == `4'10\"` {
+	if h == `4'10"` {
 		if w == "119-142" {
 			return 1
 		} else if w == "143-190" {
@@ -70,7 +70,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `4'11\"` {
+	} else if h == `4'11"` {
 		if w == "124-147" {
 			return 1
 		} else if w == "148-197" {
@@ -79,7 +79,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `5'0\"` {
+	} else if h == `5'0"` {
 		if w == "128-152" {
 			return 1
 		} else if w == "153-203" {
@@ -88,7 +88,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `5'1\"` {
+	} else if h == `5'1"` {
 		if w == "132-157" {
 			return 1
 		} else if w == "158-210" {
@@ -97,7 +97,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `5'2\"` {
+	} else if h == `5'2"` {
 		if w == "136-163" {
 			return 1
 		} else if w == "164-217" {
@@ -106,7 +106,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `5'3\"` {
+	} else if h == `5'3"` {
 		if w == "141-168" {
 			return 1
 		} else if w == "169-224" {
@@ -115,7 +115,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `5'4\"` {
+	} else if h == `5'4"` {
 		if w == "145-173" {
 			return 1
 		} else if w == "174-231" {
@@ -124,7 +124,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `5'5\"` {
+	} else if h == `5'5"` {
 		if w == "150-179" {
 			return 1
 		} else if w == "180-239" {
@@ -133,7 +133,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `5'6\"` {
+	} else if h == `5'6"` {
 		if w == "155-185" {
 			return 1
 		} else if w == "186-246" {
@@ -142,7 +142,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `5'7\"` {
+	} else if h == `5'7"` {
 		if w == "159-190" {
 			return 1
 		} else if w == "191-254" {
@@ -151,7 +151,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `5'8\"` {
+	} else if h == `5'8"` {
 		if w == "164-196" {
 			return 1
 		} else if w == "197-261" {
@@ -160,7 +160,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `5'9\"` {
+	} else if h == `5'9"` {
 		if w == "169-202" {
 			return 1
 		} else if w == "203-269" {
@@ -169,7 +169,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `5'10\"` {
+	} else if h == `5'10"` {
 		if w == "174-208" {
 			return 1
 		} else if w == "209-277" {
@@ -178,7 +178,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `5'11\"` {
+	} else if h == `5'11"` {
 		if w == "179-214" {
 			return 1
 		} else if w == "215-285" {
@@ -187,7 +187,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `6'0\"` {
+	} else if h == `6'0"` {
 		if w == "184-220" {
 			return 1
 		} else if w == "221-293" {
@@ -196,7 +196,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `6'1\"` {
+	} else if h == `6'1"` {
 		if w == "189-226" {
 			return 1
 		} else if w == "227-301" {
@@ -205,7 +205,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `6'2\"` {
+	} else if h == `6'2"` {
 		if w == "194-232" {
 			return 1
 		} else if w == "233-310" {
@@ -214,7 +214,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `6'3\"` {
+	} else if h == `6'3"` {
 		if w == "200-239" {
 			return 1
 		} else if w == "240-318" {
@@ -223,7 +223,7 @@ func checkHeightWeight(h string, w string) int {
 			return 3
 		}
 		return 0
-	} else if h == `6'4\"` {
+	} else if h == `6'4"` {
 		if w == "205-245" {
 			return 1
 		} else if w == "246-327" {
