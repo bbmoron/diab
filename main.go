@@ -49,6 +49,7 @@ func main() {
 	// U Routing
 	router.POST("/users", func(c *gin.Context) { routes.EditUser(c, db) })
 	router.POST("/auth", func(c *gin.Context) { routes.SignIn(c, db) })
+	router.POST("/appleauth", func(c *gin.Context) { routes.AppleAuth(c, db) })
 	// Start listening
 	router.Run(defaultHTTPPort)
 }

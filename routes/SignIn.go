@@ -2,8 +2,8 @@ package diab
 
 import (
 	schemas "diab/database"
-	"encoding/json"
 	"encoding/hex"
+	"encoding/json"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
