@@ -13,7 +13,7 @@ import (
 // DoctorAuth is used for doctor's access
 func DoctorAuth(c *gin.Context, db *gorm.DB) {
 	email := c.PostForm("email")
-	passowrd := c.PostForm("password")
+	password := c.PostForm("password")
 	shaed := NewSHA256([]byte(password))
 	var doctor schemas.Doctor
 	db.Find(&doctor, "email = ? AND password = ?", email, hex.EncodeToString(shaed))
