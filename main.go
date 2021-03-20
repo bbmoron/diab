@@ -41,6 +41,7 @@ func main() {
 	router.POST("/chat", func(c *gin.Context) { routes.NewChat(c, db) })
 	router.POST("/message", func(c *gin.Context) { routes.NewMessage(c, db) })
 	router.POST("/test", func(c *gin.Context) { routes.NewTest(c, db) })
+	router.POST("/doctor", func(c *gin.Context) { routes.NewDoctor(c, db) })
 	// R Routing
 	router.GET("/chats", func(c *gin.Context) { routes.GetChats(c, db) })
 	router.GET("/history", func(c *gin.Context) { routes.GetHistory(c, db) })
@@ -48,8 +49,10 @@ func main() {
 	router.GET("/test", func(c *gin.Context) { routes.GetTest(c, db) })
 	// U Routing
 	router.POST("/users", func(c *gin.Context) { routes.EditUser(c, db) })
+	router.POST("/doctors", func(c *gin.Context) { routes.EditDoctor(c, db) })
 	router.POST("/auth", func(c *gin.Context) { routes.SignIn(c, db) })
 	router.POST("/appleauth", func(c *gin.Context) { routes.AppleAuth(c, db) })
+	router.POST("/docauth", func(c *gin.Context) { routes.DoctorAuth(c, db) })
 	// Start listening
 	router.Run(defaultHTTPPort)
 }
